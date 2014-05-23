@@ -1,0 +1,15 @@
+<div>
+  <li><b><%= current_player.name.capitalize %>'s Score</b></li>
+    <table> 
+      <tr>
+      <th>P</th><th>W</th><th>D</th><th>L</th>
+      </tr>
+      <tr>
+        <td><%= current_player.games.count %> </td>
+        <td><%= current_player.win?.count%> </td>
+        <td><%= current_player.draw?.count %> </td>
+        <td><%= current_player.lost.count %> </td>
+      </tr>
+    </table>
+  </li>
+</div>

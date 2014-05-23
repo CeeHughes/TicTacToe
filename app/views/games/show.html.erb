@@ -1,0 +1,94 @@
+<p id="notice"><%= notice %></p>
+
+<h1>TicTacToe Intensive</h1>
+<br>
+<br>
+
+<table align="center" width="75%">
+  <tr>
+    <td class="x">Player X:</td>  
+    <td class="x"><%= @game.player_x.name.capitalize %></td>
+    <td class="o">Player O:</td>
+    <td class="o"><%= @game.player_o.name.capitalize %></td>
+  </tr>
+</table>
+
+
+<div class="board">
+  <table>
+    <tr>
+      <td><div class="square">
+      <% if @game.empty_squares.include? 0 %>
+        <%= grid_button 0, @game %>
+      <% else %>
+        <%= @game.move_counter_for_position(0) %>
+      <% end %>
+      </div></td>
+      <td><div class="square v">      
+      <% if @game.empty_squares.include? 1 %>
+        <%= grid_button 1, @game %>
+      <% else %>
+        <%= @game.move_counter_for_position(1) %>
+      <% end %>
+      </div></td>
+      <td><div class="square">
+      <% if @game.empty_squares.include? 2 %>
+        <%= grid_button 2, @game %>
+      <% else %>
+        <%= @game.move_counter_for_position(2) %>
+      <% end %>
+      </div></td>
+    </tr>
+    <tr>
+      <td><div class="square h">
+      <% if @game.empty_squares.include? 3 %>
+        <%= grid_button 3, @game %>
+      <% else %>
+        <%= @game.move_counter_for_position(3) %>
+      <% end %>
+      </div></td>
+      <td><div class="square v h">
+      <% if @game.empty_squares.include? 4 %>
+        <%= grid_button 4, @game %>
+      <% else %>
+        <%= @game.move_counter_for_position(4) %>
+      <% end %>
+      </div></td>
+      <td><div class="square h">
+      <% if @game.empty_squares.include? 5 %>
+        <%= grid_button 5, @game %>
+      <% else %>
+        <%= @game.move_counter_for_position(5) %>
+      <% end %>
+      </div></td>
+    </tr>
+    <tr>
+      <td><div class="square">
+      <% if @game.empty_squares.include? 6 %>
+        <%= grid_button 6, @game %>
+      <% else %>
+        <%= @game.move_counter_for_position(6) %>
+      <% end %>
+      </div></td>
+      <td><div class="square v">
+      <% if @game.empty_squares.include? 7 %>
+        <%= grid_button 7, @game %>
+      <% else %>
+        <%= @game.move_counter_for_position(7) %>
+      <% end %>
+      </div></td>
+      <td><div class="square">
+      <% if @game.empty_squares.include? 8 %>
+        <%= grid_button 8, @game %>
+      <% else %>
+        <%= @game.move_counter_for_position(8) %>
+      <% end %>
+      </div></td>
+    </tr>
+  </table>
+</div>
+
+<br>
+
+<center><%= link_to 'New Game', new_game_path %> |
+<%= link_to 'Back', games_path %></center>

@@ -1,0 +1,13 @@
+<h1>Player Log in</h1>
+<%= form_tag sessions_path do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email] %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+  <div class="actions"><center><%= submit_tag "Log in" %></center></div>
+  <div><center><%= link_to('Create new player', new_player_path)  %></center></div>     
+<% end %>

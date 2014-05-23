@@ -1,0 +1,26 @@
+# PostgreSQL. Versions 8.2 and up are supported.
+#
+# Configure Using Gemfile
+# gem 'pg'
+#
+
+development:
+  adapter: postgresql
+  database: tictactoe_intensive_development
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: tictactoe_intensive_test
+  pool: 5
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: tictactoe_intensive_production
+  pool: 5
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>

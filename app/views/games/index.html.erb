@@ -1,0 +1,10 @@
+<h1>TicTacToe Intensive</h1>
+<br>
+<center><%= link_to "New Game", new_game_path %></center>
+<br>
+<% if current_player %>
+  <% current_player.games.each do |game| %>
+    <center><%= link_to "GAME #{game.id}: #{game.player_x.name} vs #{game.player_o.name}", game %></center>
+    <br/>
+  <% end %>
+<% end %>

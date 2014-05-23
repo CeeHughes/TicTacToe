@@ -1,0 +1,100 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  font-family:  "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin: 0 auto;
+  width: 600px;
+}
+
+nav {
+  color: #FFFFFF;
+  text-shadow: 0px 0px 20px;
+  text-decoration: none;
+}
+
+h3 {
+  margin: 20px 0 0 20px;
+  color: black;
+}
+
+.container {
+  margin: 0 auto;
+  width: 600px;
+  height: 600px;
+  background-image: url('Megan and the mystical memory blossom.png');
+  background-repeat: no-repeat;
+  background-size: 600px 600px; 
+}
+
+.header {
+}
+
+h1 {
+  font-size: 30px;
+  color: magenta;
+  padding: 5px 10px;
+  margin: 0;
+  text-align: center;
+}
+
+td {
+  padding: 0px;
+  vertical-align: middle;
+}
+
+.board {
+  width: 375px;
+  margin: 0 auto; 
+}
+
+.o {
+  width: 25%;
+  color: green;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+.x {
+  width: 25%;
+  color: yellow;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+.square {
+  width: 125px;
+  height: 125px;
+  text-align: center;
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 65px;
+}
+
+.v {
+  border-left: 3px solid #FFF;
+  border-right: 3px solid #FFF;
+}
+
+.h {
+  border-top: 3px solid #FFF;
+  border-bottom: 3px solid #FFF;
+}
+
+label {
+  color: white;
+  text-align: center;
+}
+
+.field {
+  margin: 0 auto;
+  width: 50%;
+  padding: 25px;
+}
+
+input {
+  width: 100%;
+}
